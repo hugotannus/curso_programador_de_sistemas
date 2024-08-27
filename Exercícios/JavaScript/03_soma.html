@@ -1,0 +1,32 @@
+<style>
+  h1 { color: red; }
+</style>
+
+<html>
+  <head>
+    <script type="text/javascript" src="lib/soma.js"></script>
+  </head>
+  
+  <body>
+    <h1>Soma de dois números</h1>
+  </body>
+</html>
+
+<script>
+  // Declaração de variáveis
+  var entrada, a, b, total, mensagem;
+
+  // Entrada de dados
+  entrada = prompt("Digite o valor de A:");
+  a = Number(entrada);
+
+  entrada = prompt("Digite o valor de B:");
+  b = Number(entrada);
+
+  // Processamento de dados
+  total = soma(a, b);
+  mensagem = "A soma de " + a + " e " + b + " é igual a " + total + ".";
+
+  // Saída de dados
+  document.write(mensagem);
+</script>

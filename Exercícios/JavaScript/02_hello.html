@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2. Boas-vindas</title>
+</head>
+
+<body>
+  <h1>Boas-vindas</h1>
+
+  <p>
+    <cite>2. Solicite ao usuário que digite seu nome e depois exiba um alerta com a mensagem "Olá, [nome]!".
+    </cite>
+  </p>
+
+  <hr>
+</body>
+
+<script>
+  // Declaração de variáveis
+  var nome, tipo, mensagem;
+
+  // Entrada de dados
+  nome = prompt("Qual o seu nome?");
+
+  // Processamento de dados
+  mensagem = "Seja bem-vindo, " + nome + "!";
+  tipo = typeof nome;
+
+  // Saída de dados
+  alert(mensagem);
+  document.write(mensagem);
+  console.log(tipo);
+</script>
+
+</html>
