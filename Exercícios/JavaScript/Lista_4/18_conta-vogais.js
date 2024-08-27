@@ -4,11 +4,13 @@ function contaVogais(palavra) {
     for(let i=0; i < palavra.length; i++) {
         let char = palavra.charAt(i);
 
-        if(char == "a") contador++;
-        if(char == "e") contador++;
-        if(char == "i") contador++;
-        if(char == "o") contador++;
-        if(char == "u") contador++;
+        switch(char){
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u": contador++;
+        }
     }
 
     return contador; 
