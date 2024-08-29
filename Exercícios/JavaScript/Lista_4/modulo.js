@@ -76,6 +76,13 @@ function inverteTexto(texto) {
     return textoInvertido;
 }
 
+// Solução para o exercício 16
+function verificaPalindromo(texto) {
+    let textoInvertido = inverteTexto(texto);
+
+    return texto == textoInvertido;
+}
+
 module.exports = {
     PI: 3.14159,
     exercicio9: somaLista, 
@@ -84,4 +91,5 @@ module.exports = {
     somaNumerosPares,
     maiorNumero,
     inverteTexto,
+    verificaPalindromo,
 };
