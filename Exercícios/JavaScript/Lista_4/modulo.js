@@ -18,7 +18,12 @@ function somaNumerosPares(lista) {
     let N = lista.length;
 
     for (let i = 0; i < N; i++) {
-        if (lista[i] % 2 === 0) total += lista[i];
+        let numero = lista[i];
+        let resto = numero % 2;
+        
+        if (resto === 0) {
+            total += numero;
+        }
     }
 
     return total;
@@ -42,10 +47,24 @@ function somaDigitos(numero) {
     while (numero > 0) {
         total += (numero % 10);
         numero = div(numero, 10);
-        // console.log(total, numero)
     }
 
     return total;
+}
+
+// Solução para o exercício 13
+function maiorNumero(lista) {
+    let maior = -Infinity;
+    for(let i=0; i<lista.length; i++) {
+        let e = lista[i];
+
+        // if(e > maior) maior = e;
+
+        maior = Math.max(e, maior);
+    }
+
+    console.log(maior);
+    return maior;
 }
 
 module.exports = {
@@ -53,5 +72,6 @@ module.exports = {
     exercicio9: somaLista, 
     mediaListaNumerica,
     somaDigitos,
-    somaNumerosPares, 
+    somaNumerosPares,
+    maiorNumero,
 };
