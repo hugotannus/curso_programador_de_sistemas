@@ -31,13 +31,9 @@ function somaNumerosPares(lista) {
 
 // Solução para o exercício 11
 function mediaListaNumerica(lista) {
-    let N = lista.length;
+    if (!lista.length) return 0;
 
-    if (N === 0) return 0;
-
-    let soma = somaLista(lista);
-
-    return soma / N;
+    return somaLista(lista) / lista.length;
 }
 
 // Solução para o exercício 12
@@ -55,15 +51,11 @@ function somaDigitos(numero) {
 // Solução para o exercício 13
 function maiorNumero(lista) {
     let maior = -Infinity;
+
     for(let i=0; i<lista.length; i++) {
-        let e = lista[i];
-
-        // if(e > maior) maior = e;
-
-        maior = Math.max(e, maior);
+        maior = Math.max(lista[i], maior);
     }
 
-    console.log(maior);
     return maior;
 }
 
