@@ -48,11 +48,10 @@ function somaDigitos(numero) {
     return total;
 }
 
-const lib = {
+module.exports = {
+    PI: 3.14159,
+    exercicio9: somaLista, 
     mediaListaNumerica,
     somaDigitos,
-    somaLista, 
     somaNumerosPares, 
-}
-
-module.exports = lib;
+};
