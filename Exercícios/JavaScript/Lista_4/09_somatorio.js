@@ -1,6 +1,6 @@
 // [1, 2, 3, 4, 5]
 
-const somaLista = require("./modulo");
+const { somaLista } = require("./modulo");
 
 console.log(somaLista([1, 2, 3, 4, 5]) === 15);
 console.log(somaLista([2, 4, 6, 8]) === 20);
