@@ -83,6 +83,11 @@ function verificaPalindromo(texto) {
     return texto == textoInvertido;
 }
 
+// Solução para o exercício 17
+function verificaNumero(texto) {
+    return !isNaN(Number(texto));
+}
+
 module.exports = {
     PI: 3.14159,
     exercicio9: somaLista, 
@@ -92,4 +97,5 @@ module.exports = {
     maiorNumero,
     inverteTexto,
     verificaPalindromo,
+    verificaNumero
 };
