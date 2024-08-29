@@ -67,6 +67,15 @@ function maiorNumero(lista) {
     return maior;
 }
 
+// Solução para o exercício 15
+function inverteTexto(texto) {
+    let lista = texto.split('');
+    let listaInvertida = lista.reverse();
+    let textoInvertido = listaInvertida.join('');
+
+    return textoInvertido;
+}
+
 module.exports = {
     PI: 3.14159,
     exercicio9: somaLista, 
@@ -74,4 +83,5 @@ module.exports = {
     somaDigitos,
     somaNumerosPares,
     maiorNumero,
+    inverteTexto,
 };
