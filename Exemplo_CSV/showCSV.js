@@ -9,7 +9,7 @@ const conteudo = separaConteudo(linhas);
 
 console.log(headers);
 console.log(conteudo);
-const json = parteDificil(headers, conteudo);
+const json = constroiListaDeObjetos(headers, conteudo);
 
 console.table(json, ["Filme", "Ano", "Gênero"]);
 
@@ -38,22 +38,28 @@ function separaConteudo(lines) {
     return conteudo;
 }
 
-function parteDificil(headers, conteudo) {
-    const result = [];
+function constroiObjeto(headers, linhaTabela) {
+    let obj = {};
 
-    for(let i=0; i<conteudo.length; i++) {
-        let obj = {};
-        let linha = conteudo[i];
+    for(let j=0; j<headers.length; j++){
+        let titulo = headers[j];
+        let coluna = linhaTabela[j];
 
-        for(let j=0; j<headers.length; j++){
-            let titulo = headers[j];
-            let coluna = linha[j];
-
-            obj[titulo] = coluna;
-        }
-
-        result.push(obj);
+        obj[titulo] = coluna;
     }
 
-    return result;
+    return obj;
+}
+
+function constroiListaDeObjetos(headers, conteudo) {
+    const listaDeObjetos = [];
+
+    for(let i=0; i<conteudo.length; i++) {
+        const linhaTabela = conteudo[i];
+        const obj = constroiObjeto(headers,linhaTabela);
+
+        listaDeObjetos.push(obj);
+    }
+
+    return listaDeObjetos;
 }
